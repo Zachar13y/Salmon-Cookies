@@ -2,7 +2,12 @@
     justify-content: center;
 }
 
-#sammy {
-    width: 22%;
-    height: 22%;
+.sammy {
+    justify-content: center;
+    width: 54%;
+    height: 54%;
+}
+
+body {
+    background-color: lightblue;
 }
