@@ -5,13 +5,14 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (mathMax - mathMin)) + mathMin;
 }
 
+/////////////Store/////////////////////
 var pioneer = {
     location: 'Pioneer Square',
     minCustomers: 17,
     maxCustomers: 88,
     avgSale: 5.2,
     randomizeCustomers: function() {
-       var randomCustomer = getRandomInt(this.minCustomers, this.maxCustomers);
+        var randomCustomer = getRandomInt(this.minCustomers, this.maxCustomers);
         return randomCustomer;
     }
 }
@@ -19,6 +20,9 @@ var pioneerRandoms = pioneer.randomizeCustomers();
 console.log('Pioneer random customers: ' + pioneerRandoms);
 console.log(pioneer);
 
+
+
+/////////////Store/////////////////////
 var airport = {
     location: 'Portland Airport',
     minCustomers: 6,
@@ -33,6 +37,9 @@ var airportRandoms = airport.randomizeCustomers();
 console.log('Airport random customers' + airportRandoms);
 console.log(airport);
 
+
+
+/////////////Store/////////////////////
 var washingtonSquare = {
     location: 'Washington Square',
     minCustomers: 11,
@@ -45,6 +52,9 @@ var washingtonSquare = {
 }
 console.log(washingtonSquare);
 
+
+
+/////////////Store/////////////////////
 var sellwood = {
     location: 'Sellwood',
     minCustomers: 20,
@@ -57,6 +67,7 @@ var sellwood = {
 }
 console.log(sellwood);
 
+/////////////Store/////////////////////
 var pearlDistrict = {
     location: 'Pearl District',
     minCustomers: 3,
@@ -68,3 +79,16 @@ var pearlDistrict = {
     }
 }
 console.log(pearlDistrict);
+
+
+var stores = {
+    pioneer,
+    airport,
+    washingtonSquare,
+    sellwood,
+    pearlDistrict
+}
+
+function storeList() {
+    var 
+}
