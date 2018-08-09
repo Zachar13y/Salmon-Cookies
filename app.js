@@ -1,5 +1,5 @@
 function getRandomInt(min, max) {
-    console.log('Get Random int min: ' + min);
+    // console.log('Get Random int min: ' + min);
     var mathMin = Math.ceil(min)
     var mathMax = Math.floor(max)
     return Math.floor(Math.random() * (mathMax - mathMin)) + mathMin;
@@ -14,11 +14,14 @@ var pioneer = {
     randomizeCustomers: function() {
         var randomCustomer = getRandomInt(this.minCustomers, this.maxCustomers);
         return randomCustomer;
+    },
+    toHTML: function() {
+        return '<li>' + 'Location: ' + this.location + 'Min Customers: ' + this.minCustomers + 'Max Customers: ' + this.maxCustomers + '</li>';
     }
 }
 var pioneerRandoms = pioneer.randomizeCustomers();
-console.log('Pioneer random customers: ' + pioneerRandoms);
-console.log(pioneer);
+// console.log('Pioneer random customers: ' + pioneerRandoms);
+// console.log(pioneer);
 
 
 
@@ -31,11 +34,14 @@ var airport = {
     randomizeCustomers: function() {
         var randomCustomer = getRandomInt(this.minCustomers, this.maxCustomers);
         return randomCustomer;
+    },
+    toHTML: function() {
+        return '<li>' + 'Location: ' + this.location + 'Min Customers: ' + this.minCustomers + 'Max Customers: ' + this.maxCustomers + '</li>';
     }
 }
 var airportRandoms = airport.randomizeCustomers();
-console.log('Airport random customers' + airportRandoms);
-console.log(airport);
+// console.log('Airport random customers' + airportRandoms);
+// console.log(airport);
 
 
 
@@ -48,9 +54,12 @@ var washingtonSquare = {
     randomizeCustomers: function() {
         var randomCustomer = getRandomInt(this.minCustomers, this.maxCustomers);
         return randomCustomer;
+    },
+    toHTML: function() {
+        return '<li>' + 'Location: ' + this.location + 'Min Customers: ' + this.minCustomers + 'Max Customers: ' + this.maxCustomers + '</li>';
     }
 }
-console.log(washingtonSquare);
+// console.log(washingtonSquare);
 
 
 
@@ -63,9 +72,12 @@ var sellwood = {
     randomizeCustomers: function() {
         var randomCustomer = getRandomInt(this.minCustomers, this.maxCustomers);
         return randomCustomer;
+    },
+    toHTML: function() {
+        return '<li>' + 'Location: ' + this.location + 'Min Customers: ' + this.minCustomers + 'Max Customers: ' + this.maxCustomers + '</li>';
     }
 }
-console.log(sellwood);
+// console.log(sellwood);
 
 /////////////Store/////////////////////
 var pearlDistrict = {
@@ -76,19 +88,29 @@ var pearlDistrict = {
     randomizeCustomers: function() {
         var randomCustomer = getRandomInt(this.minCustomers, this.maxCustomers);
         return randomCustomer;
+    },
+    toHTML: function() {
+        return '<li>' + 'Location: ' + this.location + 'Min Customers: ' + this.minCustomers + 'Max Customers: ' + this.maxCustomers + '</li>';
     }
 }
-console.log(pearlDistrict);
+// console.log(pearlDistrict);
 
 
-var stores = {
+var stores = [
     pioneer,
     airport,
     washingtonSquare,
     sellwood,
     pearlDistrict
+]
+
+function renderStores() {
+    var storeList = document.getElementById("salmon-table");
+    for (var index = 0; index < stores.length; index++) {
+        var store = stores[index];
+        // console.log('store at index ' + index, store);
+        storeList.innerHTML += store.toHTML();
+    }
 }
 
-function storeList() {
-    var 
-}
+renderStores();
