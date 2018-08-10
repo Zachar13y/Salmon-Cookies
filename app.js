@@ -1,14 +1,21 @@
 function getRandomInt(min, max) {
-    // console.log('Get Random int min: ' + min);
     var mathMin = Math.ceil(min)
     var mathMax = Math.floor(max)
     return Math.floor(Math.random() * (mathMax - mathMin)) + mathMin;
 }
 
+var storeHours = ['10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm'];
+
+function salesPerHour() {
+    
+}
 // var calcAvgCookies = [2.1, 6.1]
         // var maxCookies = 6.1,
         // var getAvgCookies = arr => arr.reduce((minCookies, maxCookies) => minCookies + maxCookies, 0) /arr.length;
         // var randomAvgCookies = getRandomInt(this.minAvgCookies, this.maxAvgCookies);
+
+
+    
 
 /////////////Store/////////////////////
 var pioneer = {
