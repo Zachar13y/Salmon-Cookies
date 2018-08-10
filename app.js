@@ -5,6 +5,11 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (mathMax - mathMin)) + mathMin;
 }
 
+// var calcAvgCookies = [2.1, 6.1]
+        // var maxCookies = 6.1,
+        // var getAvgCookies = arr => arr.reduce((minCookies, maxCookies) => minCookies + maxCookies, 0) /arr.length;
+        // var randomAvgCookies = getRandomInt(this.minAvgCookies, this.maxAvgCookies);
+
 /////////////Store/////////////////////
 var pioneer = {
     location: 'Pioneer Square',
@@ -16,11 +21,11 @@ var pioneer = {
         return randomCustomer;
     },
     toHTML: function() {
-        return '<li>' + 'Location: ' + this.location + 'Min Customers: ' + this.minCustomers + 'Max Customers: ' + this.maxCustomers + '</li>';
+        return '<li>' + 'Location: ' + this.location + '<li>' + ' Min Customers: ' + this.minCustomers + '<li>' + ' Max Customers: ' + this.maxCustomers + '<li>' + ' Avg. Cookies/Customer: ' + this.avgSale + '</li><hr>';
     }
 }
 var pioneerRandoms = pioneer.randomizeCustomers();
-// console.log('Pioneer random customers: ' + pioneerRandoms);
+console.log('Pioneer random customers: ' + pioneerRandoms);
 // console.log(pioneer);
 
 
@@ -36,7 +41,7 @@ var airport = {
         return randomCustomer;
     },
     toHTML: function() {
-        return '<li>' + 'Location: ' + this.location + 'Min Customers: ' + this.minCustomers + 'Max Customers: ' + this.maxCustomers + '</li>';
+        return '<li>' + 'Location: ' + this.location + '<li>' + ' Min Customers: ' + this.minCustomers + '<li>' + ' Max Customers: ' + this.maxCustomers + '<li>' + ' Avg. Cookies/Customer: ' + this.avgSale + '</li><hr>';
     }
 }
 var airportRandoms = airport.randomizeCustomers();
@@ -56,7 +61,7 @@ var washingtonSquare = {
         return randomCustomer;
     },
     toHTML: function() {
-        return '<li>' + 'Location: ' + this.location + 'Min Customers: ' + this.minCustomers + 'Max Customers: ' + this.maxCustomers + '</li>';
+        return '<li>' + 'Location: ' + this.location + ' Min Customers: ' + this.minCustomers + ' Max Customers: ' + this.maxCustomers + ' Avg. Cookies/Customer: ' + this.avgSale +'</li>';
     }
 }
 // console.log(washingtonSquare);
@@ -74,7 +79,7 @@ var sellwood = {
         return randomCustomer;
     },
     toHTML: function() {
-        return '<li>' + 'Location: ' + this.location + 'Min Customers: ' + this.minCustomers + 'Max Customers: ' + this.maxCustomers + '</li>';
+        return '<li>' + 'Location: ' + this.location + ' Min Customers: ' + this.minCustomers + ' Max Customers: ' + this.maxCustomers + ' Avg. Cookies/Customer: ' + this.avgSale + '</li>';
     }
 }
 // console.log(sellwood);
@@ -90,7 +95,7 @@ var pearlDistrict = {
         return randomCustomer;
     },
     toHTML: function() {
-        return '<li>' + 'Location: ' + this.location + 'Min Customers: ' + this.minCustomers + 'Max Customers: ' + this.maxCustomers + '</li>';
+        return '<li>' + 'Location: ' + this.location + 'Min Customers: ' + this.minCustomers + 'Max Customers: ' + this.maxCustomers + 'Avg. Cookies/Customer: ' + this.avgSale + '</li>';
     }
 }
 // console.log(pearlDistrict);
