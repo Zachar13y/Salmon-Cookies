@@ -6,17 +6,25 @@
 </head>
 <body>
     <header id="header">
+        <menu class="dropdown">
+            <button onclick="goDown()" class="drop">Menu</button>
+            <nav id="drop-box" class="drop-content">
+                <a href="home.html">Home</a>
+            </nav>
+        </menu>
         <h1>Salmon Cookies</h1>
         <img class="sammy" src="./assets/salmon.jpg">
     </header>
-    <hr>
-    <ul id="salmon-table"></ul>
-    <ul id="cookies-hr">
-        <li>Location</li>
-        <li>Min Cust.</li>
-        <li></li>
-        <li></li>
-    </ul>
+    <main>
+        <hr>
+        <ul id="salmon-table"></ul>
+        <ul id="cookies-hr">
+            <li>Location</li>
+            <li>Min Cust.</li>
+            <li></li>
+            <li></li>
+        </ul>
+    </main>
     <script src="app.js"></script>
 </body>
 </html>

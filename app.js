@@ -1,3 +1,8 @@
+function goDown() {
+    console.log('user clicked')
+    document.getElementById("drop-box").classList.toggle('show');
+}
+
 function getRandomInt(min, max) {
     var mathMin = Math.ceil(min)
     var mathMax = Math.floor(max)
@@ -41,7 +46,6 @@ var pioneer = {
     }
 }
     pioneer.calculateHourlyCookies();
-    console.log(pioneer.calculateCookieSales());
 var pioneerRandoms = pioneer.randomizeCustomers();
 console.log('Pioneer random customers: ' + pioneerRandoms);
 
