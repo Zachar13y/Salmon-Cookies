@@ -6,18 +6,8 @@ function getRandomInt(min, max) {
 
 var storeHours = ['10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm'];
 
-function salesPerHour() {
-    
-}
-// var calcAvgCookies = [2.1, 6.1]
-        // var maxCookies = 6.1,
-        // var getAvgCookies = arr => arr.reduce((minCookies, maxCookies) => minCookies + maxCookies, 0) /arr.length;
-        // var randomAvgCookies = getRandomInt(this.minAvgCookies, this.maxAvgCookies);
 
 
-    
-
-/////////////Store/////////////////////
 var pioneer = {
     location: 'Pioneer Square',
     minCustomers: 17,
@@ -27,17 +17,19 @@ var pioneer = {
         var randomCustomer = getRandomInt(this.minCustomers, this.maxCustomers);
         return randomCustomer;
     },
+    calculateCookieSales: function() {
+        var hourlyCookieSales = this.randomizeCustomers() * this.avgSale;
+        return hourlyCookieSales;
+    },
     toHTML: function() {
         return '<li>' + 'Location: ' + this.location + '<li>' + ' Min Customers: ' + this.minCustomers + '<li>' + ' Max Customers: ' + this.maxCustomers + '<li>' + ' Avg. Cookies/Customer: ' + this.avgSale + '</li><hr>';
     }
 }
+console.log(pioneer.calculateCookieSales());
 var pioneerRandoms = pioneer.randomizeCustomers();
 console.log('Pioneer random customers: ' + pioneerRandoms);
-// console.log(pioneer);
 
 
-
-/////////////Store/////////////////////
 var airport = {
     location: 'Portland Airport',
     minCustomers: 6,
@@ -52,12 +44,9 @@ var airport = {
     }
 }
 var airportRandoms = airport.randomizeCustomers();
-// console.log('Airport random customers' + airportRandoms);
-// console.log(airport);
 
 
 
-/////////////Store/////////////////////
 var washingtonSquare = {
     location: 'Washington Square',
     minCustomers: 11,
@@ -71,11 +60,9 @@ var washingtonSquare = {
         return '<li>' + 'Location: ' + this.location + ' Min Customers: ' + this.minCustomers + ' Max Customers: ' + this.maxCustomers + ' Avg. Cookies/Customer: ' + this.avgSale +'</li>';
     }
 }
-// console.log(washingtonSquare);
 
 
 
-/////////////Store/////////////////////
 var sellwood = {
     location: 'Sellwood',
     minCustomers: 20,
@@ -89,9 +76,8 @@ var sellwood = {
         return '<li>' + 'Location: ' + this.location + ' Min Customers: ' + this.minCustomers + ' Max Customers: ' + this.maxCustomers + ' Avg. Cookies/Customer: ' + this.avgSale + '</li>';
     }
 }
-// console.log(sellwood);
 
-/////////////Store/////////////////////
+
 var pearlDistrict = {
     location: 'Pearl District',
     minCustomers: 3,
@@ -105,7 +91,6 @@ var pearlDistrict = {
         return '<li>' + 'Location: ' + this.location + 'Min Customers: ' + this.minCustomers + 'Max Customers: ' + this.maxCustomers + 'Avg. Cookies/Customer: ' + this.avgSale + '</li>';
     }
 }
-// console.log(pearlDistrict);
 
 
 var stores = [
@@ -120,7 +105,6 @@ function renderStores() {
     var storeList = document.getElementById("salmon-table");
     for (var index = 0; index < stores.length; index++) {
         var store = stores[index];
-        // console.log('store at index ' + index, store);
         storeList.innerHTML += store.toHTML();
     }
 }
