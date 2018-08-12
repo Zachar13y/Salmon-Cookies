@@ -33,10 +33,10 @@ var pioneer = {
     calculateHourlyCookies: function() {
         for (i = 0; i < storeHours.length; i++) {
             var cookiesPerHour = pioneer.calculateCookieSales();
-            var content = '<li>' + storeHours[i] + cookiesPerHour + ' cookies/hr' + '</li>';
+            var content = '<li>' + storeHours[i] + ': ' + (Math.round(cookiesPerHour)) + ' cookies/hr' + '</li>';
             var hourList = document.getElementById("cookies-hr");
             hourList.innerHTML += content
-            console.log(cookiesPerHour + ' cookies/hr');
+            console.log(Math.round(cookiesPerHour) + ' cookies/hr');
         }
     }
 }
