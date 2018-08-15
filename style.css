@@ -3,12 +3,12 @@
 }
 
 .sammy {
-    width: 54%;
-    height: 54%;
+    width: 44%;
+    height: 44%;
 }
 
 .text {
-    font-family: Helvetica;
+    font-family: Times;
 }
 
 body {
@@ -28,3 +28,22 @@ body {
 
 }
 
+.store-info {
+    font-family: Arial;
+
+}
+
+#pioneer-cookies {
+    font-family: Helvetica;
+    float: right;
+}
+
+#airport-cookies {
+    font-family: Helvetica;
+    float: right;
+}
+
+#washington-cookies {
+    font-family: Helvetica;
+    float: right;
+}

@@ -9,12 +9,9 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (mathMax - mathMin)) + mathMin;
 }
 
-function renderStores() {
-    var storeList = document.getElementById("store-info");
-    for (var index = 0; index < stores.length; index++) {
-        var store = stores[index];
-        storeList.innerHTML += store.toHTML();
-    }
+function renderStores(id, store) {
+    var storeList = document.getElementById(id);
+    storeList.innerHTML += store.toHTML();
 }
 
 // function buildTable() {
@@ -45,21 +42,22 @@ var pioneer = {
         return hourlyCookieSales;
     },
     toHTML: function() {
-        return '<li>' + 'Location: ' + this.location + '<li>' + ' Min Customers: ' + this.minCustomers + '<li>' + ' Max Customers: ' + this.maxCustomers + '<li>' + ' Avg. Cookies/Customer: ' + this.avgSale + '</li><hr>';
+        return '<li>' + 'Location: ' + this.location + '<li>' + ' Min Customers: ' + this.minCustomers + '<li>' + ' Max Customers: ' + this.maxCustomers + '<li>' + ' Avg. Cookies/Customer: ' + this.avgSale + '</li>';
     },
     calculateHourlyCookies: function() {
         for (i = 0; i < storeHours.length; i++) {
             var cookiesPerHour = pioneer.calculateCookieSales();
             var content = '<li>' + storeHours[i] + ': ' + (Math.round(cookiesPerHour)) + ' cookies/hr' + '</li>';
-            var hourList = document.getElementById("cookies-hr");
+            var hourList = document.getElementById("pioneer-cookies");
             hourList.innerHTML += content
             console.log(Math.round(cookiesPerHour) + ' cookies/hr');
         }
     }
 }
-    pioneer.calculateHourlyCookies();
+renderStores('pioneer-info', pioneer);
+pioneer.calculateHourlyCookies();
 var pioneerRandoms = pioneer.randomizeCustomers();
-console.log('Pioneer random customers: ' + pioneerRandoms);
+
 
 
 var airport = {
@@ -71,10 +69,29 @@ var airport = {
         var randomCustomer = getRandomInt(this.minCustomers, this.maxCustomers);
         return randomCustomer;
     },
+    // myFunction: function() {
+    //     var str = 'Location';
+    //     var result = str.bold();
+        // document.getElementById("demo").innerHTML = result;
+    // },
     toHTML: function() {
-        return '<li>' + 'Location: ' + this.location + '<li>' + ' Min Customers: ' + this.minCustomers + '<li>' + ' Max Customers: ' + this.maxCustomers + '<li>' + ' Avg. Cookies/Customer: ' + this.avgSale + '</li><hr>';
+        return '<li>' + 'Location: ' + this.location + '<li>' + ' Min Customers: ' + this.minCustomers + '<li>' + ' Max Customers: ' + this.maxCustomers + '<li>' + ' Avg. Cookies/Customer: ' + this.avgSale + '</li>';
+        // var str = 'Location';
+        // var result = str.bold();
+        // result;
+    },
+    calculateHourlyCookies: function() {
+        for (i = 0; i < storeHours.length; i++) {
+            var cookiesPerHour = pioneer.calculateCookieSales();
+            var content = '<li>' + storeHours[i] + ': ' + (Math.round(cookiesPerHour)) + ' cookies/hr' + '</li>';
+            var hourList = document.getElementById("airport-cookies");
+            hourList.innerHTML += content
+            console.log(Math.round(cookiesPerHour) + ' cookies/hr');
+        }
     }
 }
+renderStores('airport-info', airport);
+airport.calculateHourlyCookies();
 var airportRandoms = airport.randomizeCustomers();
 
 
@@ -89,9 +106,21 @@ var washingtonSquare = {
         return randomCustomer;
     },
     toHTML: function() {
-        return '<li>' + 'Location: ' + this.location + ' Min Customers: ' + this.minCustomers + ' Max Customers: ' + this.maxCustomers + ' Avg. Cookies/Customer: ' + this.avgSale +'</li>';
+        return '<li>' + 'Location: ' + this.location + '<li>' + ' Min Customers: ' + this.minCustomers + '<li>' + ' Max Customers: ' + this.maxCustomers + '<li>' + ' Avg. Cookies/Customer: ' + this.avgSale +'</li>';
+    },
+    calculateHourlyCookies: function() {
+        for (i = 0; i < storeHours.length; i++) {
+            var cookiesPerHour = pioneer.calculateCookieSales();
+            var content = '<li>' + storeHours[i] + ': ' + (Math.round(cookiesPerHour)) + ' cookies/hr' + '</li>';
+            var hourList = document.getElementById("washington-cookies");
+            hourList.innerHTML += content
+            console.log(Math.round(cookiesPerHour) + ' cookies/hr');
+        }
     }
 }
+renderStores('washington-info', washingtonSquare);
+washingtonSquare.calculateHourlyCookies();
+var pioneerRandoms = washingtonSquare.randomizeCustomers();
 
 
 var sellwood = {
@@ -131,12 +160,6 @@ var stores = [
     sellwood,
     pearlDistrict
 ]
-
-
-
-renderStores();
-
-
 
 
 // var Person = function(PersonName) {
