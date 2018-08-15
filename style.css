@@ -1,4 +1,5 @@
 #header {
+    background-color: #36342B;
     text-align: center;
 }
 
@@ -7,12 +8,20 @@
     height: 44%;
 }
 
+#salmon-title {
+    color: antiquewhite;
+}
+
 .text {
     font-family: Times;
 }
 
 body {
-    background-color: lightblue;
+    background-color: #D0C9C2;
+}
+
+#daily-sales {
+    text-align: center;
 }
 
 .show {
@@ -29,6 +38,7 @@ body {
 }
 
 .store-info {
+    background-color: #C6915D;
     font-family: Arial;
 
 }

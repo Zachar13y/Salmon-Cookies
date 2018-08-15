@@ -42,7 +42,7 @@ var pioneer = {
         return hourlyCookieSales;
     },
     toHTML: function() {
-        return '<li>' + 'Location: ' + this.location + '<li>' + ' Min Customers: ' + this.minCustomers + '<li>' + ' Max Customers: ' + this.maxCustomers + '<li>' + ' Avg. Cookies/Customer: ' + this.avgSale + '</li>';
+        return '<li>' + ' <b> Location: </b>' + this.location + '<li>' + ' <b> Min Customers: </b>' + this.minCustomers + '<li>' + '<b> Max Customers: </b>' + this.maxCustomers + '<li>' + '<b> Avg. Cookies/Customer: </b>' + this.avgSale + '</li>';
     },
     calculateHourlyCookies: function() {
         for (i = 0; i < storeHours.length; i++) {
