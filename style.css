@@ -7,6 +7,10 @@
     height: 54%;
 }
 
+.text {
+    font-family: Helvetica;
+}
+
 body {
     background-color: lightblue;
 }
@@ -23,3 +27,4 @@ body {
     display: none;
 
 }
+

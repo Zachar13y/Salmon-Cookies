@@ -10,12 +10,24 @@ function getRandomInt(min, max) {
 }
 
 function renderStores() {
-    var storeList = document.getElementById("salmon-table");
+    var storeList = document.getElementById("store-info");
     for (var index = 0; index < stores.length; index++) {
         var store = stores[index];
         storeList.innerHTML += store.toHTML();
     }
 }
+
+// function buildTable() {
+//     var container = document.getElementById('table-container');
+//     var table = document.createElement('table');
+//     pioneer.header(table)
+
+// }
+
+// for (i=0; i < store.length; i++) {
+//     var store = store[i];
+//     store.buildTable();}
+
 var storeHours = ['10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm'];
 
 
@@ -123,3 +135,22 @@ var stores = [
 
 
 renderStores();
+
+
+
+
+// var Person = function(PersonName) {
+//     this.name = PersonName;
+//     this.sayGreeting = function() {
+//         alert("Hello biatch!");
+//     }
+
+//     this.addToTable = function(table) {
+//         var row = document.createElement('tr');
+//         var cell = document.createElement('td');
+//         cell.innerText = this.name;
+//         row.appendChild(cell);
+//         cell = document.createElement('td');
+
+//     }
+// }
