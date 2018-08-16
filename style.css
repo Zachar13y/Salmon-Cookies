@@ -1,16 +1,59 @@
 #header {
+    background-color: #36342B;
     text-align: center;
 }
 
 .sammy {
-    width: 54%;
-    height: 54%;
+    width: 44%;
+    height: 44%;
+}
+
+#salmon-title {
+    color: antiquewhite;
+}
+
+.text {
+    font-family: Times;
 }
 
 body {
-    background-color: lightblue;
+    background-color: #D0C9C2;
 }
 
-.y {
-    color: red;
+#daily-sales {
+    text-align: center;
+}
+
+.show {
+    display: block;
+}
+
+.dropdown {
+    float: left;
+}
+
+.drop-content {
+    display: none;
+
+}
+
+.store-info {
+    background-color: #C6915D;
+    font-family: Arial;
+
+}
+
+#pioneer-cookies {
+    font-family: Helvetica;
+    float: right;
+}
+
+#airport-cookies {
+    font-family: Helvetica;
+    float: right;
+}
+
+#washington-cookies {
+    font-family: Helvetica;
+    float: right;
 }

@@ -6,17 +6,38 @@
 </head>
 <body>
     <header id="header">
-        <h1>Salmon Cookies</h1>
+        <menu class="dropdown">
+            <button onclick="goDown()" class="drop">Menu</button>
+            <nav id="drop-box" class="drop-content">
+                <a href="home.html">Home</a>
+            </nav>
+        </menu>
+        <h1 id="salmon-title">Salmon Cookies</h1>
         <img class="sammy" src="./assets/salmon.jpg">
     </header>
-    <hr>
-    <ul id="salmon-table"></ul>
-    <ul id="cookies-hr">
-        <li>Location</li>
-        <li>Min Cust.</li>
-        <li></li>
-        <li></li>
-    </ul>
+    <main>
+        <p class="text">Redtooth triggersalmon fusilier salmon goatsalmon sandburrower pirate perch beardsalmon freshwater herring northern Stargazer. Deepwater cardinalsalmon, North American freshwater catsalmon tubeshoulder moray eel, chain pickerel, snakehead shark.
+            Ghost fish torpedo; pike conger tommy ruff bonytail chub rock bass burbot threadfin saber-toothed blenny. Trout cod delta smelt, topminnow bala shark Colorado squawfish red snapper porcupinefish rockling cavefish mosshead warbonnet. Flat loach Blobfish; rock beauty bluefish anemonefish Old World knifefish bango.
+        </p>
+        <hr>
+        <section>
+            <h2 id="daily-sales"><u>Daily Sales Report</u></h2>
+        </section>
+        <div id="pioneer-info" class="store-info">
+            <span id="pioneer-cookies">
+            </span>
+        </div>
+        <hr>
+        <div id="airport-info" class="store-info">
+            <div id="airport-cookies">
+            </div>
+        </div>
+        <hr>
+        <div id="washington-info" class="store-info">
+            <div id="washington-cookies"></div>
+        </div>
+        <hr>
+    </main>
     <script src="app.js"></script>
 </body>
 </html>
