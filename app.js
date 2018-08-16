@@ -165,7 +165,7 @@ var stores = [
 // var Person = function(PersonName) {
 //     this.name = PersonName;
 //     this.sayGreeting = function() {
-//         alert("Hello biatch!");
+//         alert("Hello person!");
 //     }
 
 //     this.addToTable = function(table) {
