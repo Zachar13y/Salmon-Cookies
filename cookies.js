@@ -1,10 +1,13 @@
-var Store = function(location, minCustomers, maxCustomers) {
-    this.Location = location;
-    this.MinCustomers = minCustomers;
-    this.MaxCustomers = maxCustomers;
+var Store = function(location, minCustomers, maxCustomers, avgCookies) {
+    this.location = location;
+    this.minCustomers = minCustomers;
+    this.maxCustomers = maxCustomers;
+    this.avgCookies = avgCookies;
 
     ////////////Takes user input to add to the table
-//     var locationName = this.location.length;
+    // var locationName = this.location.length;
+    // var min = this.minCustomers.length;
+//////////////////////////////
     this.addToTable = function(table) {
         var row = document.createElement('tr');
         var cell = document.createElement('td');
@@ -15,10 +18,14 @@ var Store = function(location, minCustomers, maxCustomers) {
         row.appendChild(cell);
         cell = document.createElement('td');
         cell.innerText = this.maxCustomers;
+        row.appendChild(cell);
+        table.appendChild(row);
+        cell = document.createElement('td');
+        cell.innerText = this.avgCookies
+        row.appendChild(cell);
         table.appendChild(row);
     }
 }
-//////////////////////////////
 
 var stores = [];
 stores.push(new Store('Pioneer Square', 'Min. Customers: 17', 'Max. Customers: 88'));
