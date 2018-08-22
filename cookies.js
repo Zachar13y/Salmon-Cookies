@@ -45,7 +45,7 @@ var Time = function(hour, cookies) {
 
     this.addToTable = function(table) {
     var row = document.createElement('tr');
-    var cell = document.createElement('tr');
+    var cell = document.createElement('td');
     cell.innerText = this.hour;
     row.appendChild(cell);
     cell = document.createElement('tr');
@@ -58,7 +58,15 @@ var Time = function(hour, cookies) {
 
 
 var hours = [];
-hours.push(new Time('10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm'));
+hours.push(new Time('10am', 'hypothetical cookie'));
+hours.push(new Time('11am', 'hypothetical cookie'));
+hours.push(new Time('12pm'));
+hours.push(new Time('1pm'));
+hours.push(new Time('2pm'));
+hours.push(new Time('3pm'));
+hours.push(new Time('4pm'));
+hours.push(new Time('5pm'));
+
 
 var referenceTime = document.getElementById('time-table').firstElementChild;
 for (var i=0; i < hours.length; i++) {
