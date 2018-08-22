@@ -1,5 +1,5 @@
 function goDown() {
-    console.log('user clicked')
+    console.log('user clicked');
     document.getElementById("drop-box").classList.toggle('show');
 }
 
@@ -23,7 +23,8 @@ function renderStores(id, store) {
 
 // for (i=0; i < store.length; i++) {
 //     var store = store[i];
-//     store.buildTable();}
+//     store.buildTable();
+//}
 
 var storeHours = ['10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm'];
 
